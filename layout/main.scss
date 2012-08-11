@@ -96,5 +96,20 @@ footer {
 @media (max-width: 50em) {
     nav a {
         display: block;
+        padding: 0.5em 0;
+        @include gradient-background((top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)));
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        border-bottom: 0.2em solid black;
+
+        &:first-child {
+            border-radius: 0.5em 0.5em 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 0.5em 0.5em;
+            border-bottom: none;
+        }
     }
 }
