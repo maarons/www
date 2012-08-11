@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Linux Libertine;
+    src: url("/static/LinLibertine_R.woff");
+}
+@font-face {
+    font-family: Linux Libertine;
+    font-weight: bold;
+    src: url("/static/LinLibertine_RB.woff");
+}
+
+@mixin transition($property, $duration) {
+    -moz-transition-property: $property;
+    -webkit-transition-property: $property;
+    -o-transition-property: $property;
+    transition-property: $property;
+
+    -moz-transition-duration: $duration;
+    -webkit-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+@mixin gradient-background($gradient) {
+    background: -moz-linear-gradient($gradient);
+    background: -webkit-linear-gradient($gradient);
+    background: -o-linear-gradient($gradient);
+    background: linear-gradient($gradient);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Linux Libertine, serif;
+    font-weight: bold;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+footer {
+    font-size: 0.8em;
+}
+
+#banner {
+    font-family: Linux Libertine, serif;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* Layout will render differently for big and small screens. */
+
+/* Big screens - desktops, laptops, etc. */
+@media (min-width: 50em) {
+    html {
+        overflow-y: scroll;
+    }
+
+    body {
+        margin: 0.5em auto;
+        width: 50em;
+    }
+
+    #banner {
+        font-size: 2.5em;
+        margin: 0.7em 0 0.5em;
+    }
+
+    nav {
+        background-color: black;
+        border-radius: 0.5em;
+        padding: 1em 0;
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            @include gradient-background((top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)));
+            background-color: black;
+            @include transition(background-color, 0.5s);
+
+            &:first-child {
+                border-radius: 0.5em 0 0 0.5em;
+            }
+
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+}
+
+/* Small screens - phones, etc. */
+@media (max-width: 50em) {
+    nav a {
+        display: block;
+    }
+}
