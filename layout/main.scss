@@ -98,18 +98,29 @@ footer {
         display: block;
         padding: 0.5em 0;
         @include gradient-background((top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)));
+        @include transition(background-color, 0.5s);
         text-align: center;
         color: white;
         text-decoration: none;
         border-bottom: 0.2em solid black;
 
         &:first-child {
-            border-radius: 0.5em 0.5em 0 0;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
         }
 
         &:last-child {
-            border-radius: 0 0 0.5em 0.5em;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
             border-bottom: none;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        &.active {
+            background-color: rgba(0, 0, 0, 0.5);
         }
     }
 }
