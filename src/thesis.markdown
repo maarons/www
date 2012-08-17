@@ -1,5 +1,5 @@
 ---
-title: Marek Sapota, M.Sc. — M.Sc. and B.Sc. thesis
+title: Marek Sapota — M.Sc. and B.Sc. thesis
 ---
 
 # M.Sc. thesis

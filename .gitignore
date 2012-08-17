@@ -6,3 +6,4 @@ static/LinLibertine_R.woff
 *.hi
 *.o
 hakyll
+.linkcheckerrc

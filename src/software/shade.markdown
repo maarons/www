@@ -1,5 +1,5 @@
 ---
-title: Marek Sapota, M.Sc. — Shade
+title: Marek Sapota — Shade
 ---
 
 # Shade
@@ -15,24 +15,24 @@ xmonad or Fluxbox.  Shade currently consists of these utilities:
 - [Storage](#storage)
 
 These utilities are not really connected to each other, and there is no reason
-why they couldn’t be used separately.
+why they could not be used separately.
 
-Shade is free software licensed under the X11 license, see the
-[COPYING](https://github.com/maarons/Shade/blob/master/COPYING) file distributed
-along Shade for the full license text.
+Shade is free software licensed under the X11 license, see the [COPYING](
+https://github.com/maarons/Shade/blob/master/COPYING) file distributed along
+Shade for the full license text.
 
 ## Open
-Inspired by Mac OS X’s command bearing the same
-[name](https://developer.apple.com/library/mac/#documentation/Darwin/Reference/Manpages/man1/open.1.html),
+Inspired by Mac OS X’s command bearing the same [name](
+https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/open.1.html),
 this utility allows users to conveniently open different file types with a
 single application.  Unlike Mac OS X’s “open” and Freedesktop.org’s “xdg-open”
 this utility is completely independent of any DE settings, “.desktop” files and
 any other unnecessary complications.  Just link a command like “eog”, “evince”
-or “mplayer -f” to chosen mime types and you’re good to go.
+or “mplayer -f” to chosen mime types and you are good to go.
 
 ## PulseAudio Control
 This utility can control PulseAudio sinks from the command line.  It has some
-basic controls like volume up, volume down and mute.  It’s most useful when
+basic controls like volume up, volume down and mute.  It is most useful when
 called through some keyboard shortcut.
 
 ## Shade

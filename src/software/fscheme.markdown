@@ -1,5 +1,5 @@
 ---
-title: Marek Sapota, M.Sc. — fScheme
+title: Marek Sapota — fScheme
 ---
 
 # fScheme

@@ -1,5 +1,5 @@
 ---
-title: Marek Sapota, M.Sc. — Mozilla Ubiquity Commands
+title: Marek Sapota — Mozilla Ubiquity Commands
 ---
 
 # Mozilla Ubiquity Commands

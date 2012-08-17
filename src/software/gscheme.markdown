@@ -1,5 +1,5 @@
 ---
-title: Marek Sapota, M.Sc. — gScheme
+title: Marek Sapota — gScheme
 ---
 
 # gScheme
