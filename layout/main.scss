@@ -27,6 +27,7 @@ body {
 }
 
 footer {
+    clear: both;
     font-size: 0.8em;
 }
 
@@ -41,8 +42,6 @@ footer {
         color: black;
     }
 }
-
-/* Layout will render differently for big and small screens. */
 
 /* Big screens - desktops, laptops, etc. */
 @media (min-width: 50em) {
@@ -81,6 +80,11 @@ footer {
             &:hover {
                 background-color: white;
             }
+
+            &.active {
+                @include gradient-background((top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)));
+                color: black;
+            }
         }
     }
 }
@@ -118,6 +122,10 @@ footer {
             }
 
             &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            &.active {
                 background-color: rgba(0, 0, 0, 0.8);
             }
         }
