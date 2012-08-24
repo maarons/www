@@ -121,13 +121,13 @@ with exit code 0 if they succeeded.
 # SpamAssassin configuration tips
 
 SpamAssassin (as of version 3.2) has lots of bugs and will probably cause
-problems.  If it hangs it should be safe to kill SpamAssassin process - it will
+problems.  If it hangs it should be safe to kill SpamAssassin process — it will
 not kill MailChariot and MailChariot should retry operation that was
 interrupted.
 
 If you do not want to perform time consuming synchronization while running
-spamassassin and sa-learn, you should add following lines to your SpamAssassin
-configuration.
+`spamassassin` and `sa-learn`, you should add following lines to your
+SpamAssassin configuration.
 
     bayes_learn_to_journal 1
     bayes_journal_max_size 0
