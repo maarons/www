@@ -17,7 +17,7 @@ any big web applications I do not use Cortex myself, which means I do not
 develop it any more.
 
 ## Miranda
-Miranda is a distributed, self-replicating, key-value store that is used by
+Miranda is a distributed, self‐replicating, key‐value store that is used by
 other modules as a database and a communication bus.
 
 ## Saffron

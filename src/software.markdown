@@ -48,7 +48,7 @@ specific licensing information.
 # Contributions
 
 This is a list of some of the more prominent projects I have contributed to.
-This list is by no means complete or up-to-date, but I do refresh it from time
+This list is by no means complete or up‐to‐date, but I do refresh it from time
 to time.
 
 - Phabricator, Arcanist and libphutil — multiple enhancements during my
