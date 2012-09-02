@@ -1,8 +1,6 @@
 _cache/
 _site/
 static/html5shiv.js
-static/LinLibertine_RB.woff
-static/LinLibertine_R.woff
 *.hi
 *.o
 hakyll
