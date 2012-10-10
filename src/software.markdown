@@ -12,6 +12,8 @@ specific licensing information.
 
 - [dotfiles](/software/dotfiles.html) — configuration files for many programs
   that I use.
+- [Gentoo overlay](https://github.com/maarons/overlay) — my personal Gentoo
+  overlay.
 - [Hathor](/software/hathor.html) — web application for monitoring TV series.
 - [OSM browser extension](/software/osm_extension.html) — Mozilla Firefox,
   Google Chrome/Chromium and Opera extension for displaying and searching
