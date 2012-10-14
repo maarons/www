@@ -11,7 +11,7 @@ xmonad or Fluxbox.  Shade currently consists of these utilities:
 
 - [Open](#open)
 - [PulseAudio Control](#pulseaudio-control)
-- [Shade](#shade)
+- [Shade](#shade-1)
 - [Storage](#storage)
 
 These utilities are not really connected to each other, and there is no reason
