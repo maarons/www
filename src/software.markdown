@@ -61,7 +61,7 @@ to time.
   minor patches during my internship at Facebook in 2011.
 - GNU MyServer — I have contributed a graphical configuration manager during my
   internship at FSF in 2009.
-- Gentoo GNU+Linux — multiple bug reports and patches.
+- Gentoo GNU+Linux — Genkernel and Portage patches, and multiple bug reports.
 - vim-ruby — improvements to indentation of eRuby files.
 - gnu.org — I am a GNU Volunteer Webmaster from December 2008.
 - Multiple bug reports for freedesktop.org, Fedora GNU+Linux, Ubuntu GNU+Linux
