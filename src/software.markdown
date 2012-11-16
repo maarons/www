@@ -15,6 +15,8 @@ specific licensing information.
 - [Gentoo overlay](https://github.com/maarons/overlay) — my personal Gentoo
   overlay.
 - [Hathor](/software/hathor.html) — web application for monitoring TV series.
+- [LinkMarks](https://github.com/maarons/LinkMarks) — private bookmarking
+  service.
 - [OSM browser extension](/software/osm_extension.html) — Mozilla Firefox,
   Google Chrome/Chromium and Opera extension for displaying and searching
   OpenStreetMap.
