@@ -1,44 +1,34 @@
 var gallon = 3.78541178; // Gallon to litres.
 var gallonImp = 4.54609188; // Imperial gallon to litres.
-var mil = 10.0; // Scandinavian mile to km.
 var mile = 1.609344; // Mile to km.
-var eps = 1e-10;
+var eps = 0.001;
 
-function recalculate(mpg) {
-  var mpgimp = (mpg * gallonImp) / gallon;
-  var kml = (mpg * mile) / gallon;
-  var lhkm = (kml < eps) ? 0 : 100.0 / kml;
-  var lmil = (kml < eps) ? 0 : mil / kml;
+function setValues(mpg, mpgimp, lhkm) {
   $("#mpg").val(mpg.toFixed(2));
   $("#mpgimp").val(mpgimp.toFixed(2));
-  $("#kml").val(kml.toFixed(2));
   $("#lhkm").val(lhkm.toFixed(2));
-  $("#lmil").val(lmil.toFixed(2));
 }
 
 $("#mpg").change(function() {
-  recalculate(parseFloat($(this).val()));
+  var mpg = parseFloat($(this).val());
+  var mpgimp = mpg * gallonImp / gallon;
+  var lhkm = (mpg > eps) ? (100 * gallon) / (mpg * mile) : 0.0;
+  setValues(mpg, mpgimp, lhkm);
 });
 
 $("#mpgimp").change(function() {
-  var mpg = parseFloat($(this).val()) * gallon / gallonImp;
-  recalculate(parseFloat(mpg));
-});
-
-$("#kml").change(function() {
-  var mpg = parseFloat($(this).val()) * gallon / mile;
-  recalculate(parseFloat(mpg));
+  var mpgimp = parseFloat($(this).val());
+  var mpg = mpgimp * gallon / gallonImp;
+  var lhkm = (mpgimp > eps) ? (100 * gallonImp) / (mpgimp * mile) : 0.0;
+  setValues(mpg, mpgimp, lhkm);
 });
 
 $("#lhkm").change(function() {
-  var mpg = (100.0 * gallon) / (mile * parseFloat($(this).val()));
-  recalculate(parseFloat(mpg));
-});
-
-$("#lmil").change(function() {
-  var mpg = (mil * gallon) / (mile * parseFloat($(this).val()));
-  recalculate(parseFloat(mpg));
+  var lhkm = parseFloat($(this).val());
+  var mpg = (lhkm > eps) ? (100 * gallon) / (mile * lhkm) : 0.0;
+  var mpgimp = mpg * gallonImp / gallon;
+  setValues(mpg, mpgimp, lhkm);
 });
 
 // Fill in the starting values.
-recalculate(0.0);
+setValues(0.0, 0.0, 0.0);
