@@ -13,6 +13,11 @@ main = hakyll $ do
         ; compile copyFileCompiler
         }
 
+    ; match "src/robots.txt" $ do
+        { route $ constRoute "robots.txt"
+        ; compile copyFileCompiler
+        }
+
     ; match "layout/*.html" $ compile templateCompiler
 
     ; match "layout/*.scss" $ do
