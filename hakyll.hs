@@ -39,18 +39,14 @@ main = hakyll $ do
 
     ; match (regex "^src/.*\\.html$") $ do
         { route $ gsubRoute "^src/" (const "")
-        ; compile $ readPageCompiler
-            >>> applyTemplateCompiler "layout/main.html"
-            >>> relativizeUrlsCompiler
+        ; compilePage readPageCompiler
         }
 
     ; match (regex "^src/.*\\.markdown$") $ do
         { route $ composeRoutes
             (gsubRoute "^src/" (const ""))
             (setExtension ".html")
-        ; compile $ pageCompiler
-            >>> applyTemplateCompiler "layout/main.html"
-            >>> relativizeUrlsCompiler
+        ; compilePage pageCompiler
         }
     }
 
@@ -80,3 +76,14 @@ replace before after str  = replace' [] str
                 (foldl (flip (:)) r after)
                 (drop (length before) s)
             | otherwise = replace' ((head s):r) (tail s)
+
+renderFieldIfPresent :: String -> String -> Page String -> Page String
+renderFieldIfPresent field defaultValue page =
+    case getFieldMaybe field page of
+        Nothing -> setField field defaultValue page
+        Just value -> setField field value page
+
+compilePage compiler = compile $ compiler
+    >>> arr (renderFieldIfPresent "header" "")
+    >>> applyTemplateCompiler "layout/main.html"
+    >>> relativizeUrlsCompiler

@@ -1,5 +1,6 @@
 ---
 title: Marek Sapota, M.Sc.
+header: <link rel="prerender" href="/software.html">
 ---
 
 # About me
